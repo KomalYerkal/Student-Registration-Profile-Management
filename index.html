@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration & Profile Management</h1>
+
+        <!-- Registration Form -->
+        <div class="form-box">
+            <h2 id="formTitle">Student Registration</h2>
+
+            <form id="studentForm">
+
+                <input type="hidden" id="editIndex">
+
+                <div class="form-group">
+                    <label>Student Name *</label>
+                    <input type="text" id="name" placeholder="Enter student name">
+                    <small id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>PRN *</label>
+                    <input type="text" id="prn" placeholder="Enter PRN">
+                    <small id="prnError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="text" id="email" placeholder="Enter email">
+                    <small id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile Number *</label>
+                    <input type="text" id="mobile" placeholder="Enter 10-digit mobile number">
+                    <small id="mobileError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Branch *</label>
+                    <select id="branch">
+                        <option value="">Select Branch</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="AI & DS">AI & DS</option>
+                        <option value="ENTC">ENTC</option>
+                        <option value="Mechanical">Mechanical</option>
+                    </select>
+                    <small id="branchError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Year *</label>
+                    <select id="year">
+                        <option value="">Select Year</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                    <small id="yearError"></small>
+                </div>
+
+                <button type="submit" id="submitBtn">Register Student</button>
+                <button type="button" id="cancelBtn" class="cancel-btn">
+                    Cancel Edit
+                </button>
+
+            </form>
+
+            <p id="successMessage"></p>
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name, PRN or branch..."
+            >
+        </div>
+
+
+        <!-- Student Records -->
+        <div class="records-box">
+            <h2>Student Records</h2>
+
+            <p id="studentCount">Total Students: 0</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Name</th>
+                            <th>PRN</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Branch</th>
+                            <th>Year</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="noStudents">No students found.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

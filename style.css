@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form */
+
+.form-box,
+.records-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+small {
+    display: block;
+    color: red;
+    margin-top: 5px;
+    min-height: 18px;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #007bff;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.cancel-btn {
+    background: #777;
+    display: none;
+    margin-left: 8px;
+}
+
+/* Success Message */
+
+#successMessage {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Search */
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    background: white;
+}
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+/* Action buttons */
+
+.edit-btn {
+    background: #28a745;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+/* Student count */
+
+#studentCount {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* No students */
+
+#noStudents {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .form-box,
+    .records-box {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    button {
+        margin-bottom: 5px;
+    }
+}
